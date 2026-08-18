@@ -1,14 +1,11 @@
 package main
 
 import (
-	"github.com/01-edu/z01"
-
+	"fmt"
 	"piscine"
 )
 
 func main() {
-	z01.PrintRune(piscine.FirstRune("Hello!"))
-	z01.PrintRune(piscine.FirstRune("Salut!"))
-	z01.PrintRune(piscine.FirstRune("Ola!"))
-	z01.PrintRune('\n')
+	fmt.Println(piscine.IsNumeric("010203"))
+	fmt.Println(piscine.IsNumeric("01,02,03"))
 }
