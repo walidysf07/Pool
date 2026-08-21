@@ -7,8 +7,18 @@ import (
 )
 
 func main() {
-	for i := 1; i < len(os.Args); i++ {
-		for _, r := range os.Args[i] {
+	a := os.Args[1:]
+
+	for i := 0; i < len(a); i++ {
+		for j := i + 1; j < len(a); j++ {
+			if a[i] > a[j] {
+				a[i], a[j] = a[j], a[i]
+			}
+		}
+	}
+
+	for _, s := range a {
+		for _, r := range s {
 			z01.PrintRune(r)
 		}
 		z01.PrintRune('\n')
