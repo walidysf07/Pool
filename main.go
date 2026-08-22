@@ -59,6 +59,7 @@ func solve(board *[9][9]int, solutions *int) {
 	}
 
 	*solutions++
+	*solution=*board 
 }
 
 func main() {
@@ -100,6 +101,7 @@ func main() {
 		}
 	}
 
+	var solution [9][9]int 
 	solutions := 0
 	solve(&board, &solutions)
 
