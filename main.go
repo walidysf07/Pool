@@ -29,7 +29,7 @@ func valid(board [9][9]int, row, col, num int) bool {
 	return true
 }
 
-func solve(board *[9][9]int, solutions *int) {
+func solve(board *[9][9]int, solution *[9][9]int, solutions *int) {
 	if *solutions > 1 {
 		return
 	}
@@ -44,7 +44,7 @@ func solve(board *[9][9]int, solutions *int) {
 				if valid(*board, row, col, num) {
 					board[row][col] = num
 
-					solve(board, solutions)
+					solve(board, solution, solutions)
 
 					board[row][col] = 0
 
@@ -103,7 +103,7 @@ func main() {
 
 	var solution [9][9]int 
 	solutions := 0
-	solve(&board, &solutions)
+	solve(&board, &solution, &solutions)
 
 	if solutions != 1 {
 		fmt.Println("Error")
