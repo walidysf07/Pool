@@ -115,7 +115,7 @@ func main() {
 			if col > 0 {
 				fmt.Print(" ")
 			}
-			fmt.Print(board[row][col])
+			fmt.Print(solution[row][col])
 		}
 		fmt.Println()
 	}
